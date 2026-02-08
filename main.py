@@ -1,5 +1,7 @@
 import pygame, random
 pygame.init()
+pygame.mixer.init()
+
 '''
 Welcome to PA0 – Flappy Bird! Throughout this code, you are going to find a recreation of a game you have probably
 heard of before. This is an introductory assignment designed to help you familiarize yourself with what you can expect 
@@ -58,6 +60,10 @@ game_over = False
 game_started = False
 
 clock = pygame.time.Clock()
+# 🎵 Background music
+pygame.mixer.music.load("background_music.mp3")
+pygame.mixer.music.set_volume(0.4)
+pygame.mixer.music.play(-1)
 
 running = True
 while running:
